@@ -1,0 +1,39 @@
+GET http://localhost:5247/recipes
+
+###
+GET http://localhost:5247/recipes/3
+
+###
+POST http://localhost:5247/recipes
+Content-Type: application/json
+
+{
+  "date":"sjdfkjsf",
+  "batchNo":"Abu",
+  "batchQty":"Wabaidar",
+  "mcNo":"Hasan",
+  "workOrderNo":"Fahim",
+  "yarnLotNo":"Abu",
+  "fType":"Wabaider",
+  "dyeingProcess":"Hasan",
+  "remarks":"Ghjshdj"
+}
+
+###
+PUT http://localhost:5247/recipes/8
+Content-Type: application/json
+
+{
+  "Date":"None",
+  "batchNo":"Rafat",
+  "batchQty":"Khan",
+  "mcNo":"3",
+  "workOrderNo":"Rafat",
+  "yarnLotNo":"Khan",
+  "fType":"Adrito",
+  "dyeingProcess":"Rafat",
+  "remarks":"Khan"
+}
+
+###
+DELETE http://localhost:5247/recipes/4

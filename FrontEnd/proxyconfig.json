@@ -1,0 +1,8 @@
+{
+  "/recipes/*":{
+    "target":"http://localhost:5247",
+    "secure":false,
+    "loglevel":"debug",
+    "changeOrigin":true
+  }
+}

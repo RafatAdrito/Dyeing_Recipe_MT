@@ -1,0 +1,153 @@
+<form [formGroup]="newForm" (ngSubmit)="saveData()">
+  <div class="firstform">
+    <div class="col">
+      <div class="form-group">
+        <label for="cName">Customer Name:</label>
+        <input
+          type="text"
+          pInputText
+          id="cName"
+          formControlName="customerName"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="style">Style:</label>
+        <input type="text" pInputText id="style" formControlName="style" />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="color">Color:</label>
+        <input type="text" pInputText id="color" formControlName="color" />
+      </div>
+
+      <div class="form-group">
+        <label for="fabrication">Fabrication:</label>
+        <input
+          type="text"
+          pInputText
+          id="fabrication"
+          formControlName="fabrication"
+        />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="order">Order No.:</label>
+        <input type="text" pInputText id="order" formControlName="orderNo" />
+      </div>
+
+      <div class="form-group">
+        <label for="labDip">Lab Dip No:</label>
+        <input type="text" pInputText id="labDip" formControlName="labdipNo" />
+      </div>
+    </div>
+  </div>
+  <hr />
+  <hr />
+  <div class="firstform" formGroupName="tableFields">
+    <div class="col">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="text" pInputText id="date" formControlName="date" />
+      </div>
+
+      <div class="form-group">
+        <label for="mcNo">M/C No:</label>
+        <input type="text" pInputText id="mcNo" formControlName="mcNo" />
+      </div>
+
+      <div class="form-group">
+        <label for="fType">F/type:</label>
+        <input type="text" pInputText id="fType" formControlName="fType" />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="batchNo">BatchNo:</label>
+        <input type="text" pInputText id="batchNo" formControlName="batchNo" />
+      </div>
+
+      <div class="form-group">
+        <label for="workOrderNo">Workorder No:</label>
+        <input
+          type="text"
+          pInputText
+          id="workOrderNo"
+          formControlName="workOrderNo"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dyeingProcess">Dyeing Process:</label>
+        <input
+          type="text"
+          pInputText
+          id="dyeingProcess"
+          formControlName="dyeingProcess"
+        />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="batchQty">BatchQty:</label>
+        <input
+          type="text"
+          pInputText
+          id="batchQty"
+          formControlName="batchQty"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="yarnLotNo">Yarn Lot No:</label>
+        <input
+          type="text"
+          pInputText
+          id="yarnLotNo"
+          formControlName="yarnLotNo"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="remarks">Remarks:</label>
+        <input type="text" pInputText id="remarks" formControlName="remarks" />
+      </div>
+    </div>
+  </div>
+  @if(wantToUpdate()){
+  <button type="button" (click)="finalupdate(fetchedId)" [disabled]="newForm.controls.tableFields.invalid">Update</button>
+  } @else{
+  <button type="submit" [disabled]="newForm.invalid">Add</button>
+  }
+</form>
+
+<p-table [value]="rows()" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let heading of headings">{{ heading }}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-row>
+    <tr>
+      <td>{{ row.date }}</td>
+      <td>{{ row.batchNo }}</td>
+      <td>{{ row.batchQty }}</td>
+      <td>{{ row.mcNo }}</td>
+      <td>{{ row.workOrderNo }}</td>
+      <td>{{ row.yarnLotNo }}</td>
+      <td>{{ row.fType }}</td>
+      <td>{{ row.dyeingProcess }}</td>
+      <td>{{ row.remarks }}</td>
+      <td>
+        <span (click)="deleteRec(row.id)">Delete</span>
+        <span (click)="updateRec(row.id)">Update</span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

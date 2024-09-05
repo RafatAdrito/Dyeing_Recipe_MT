@@ -1,0 +1,40 @@
+{
+  "datas": [
+    {
+      "date": "24-Jul-1986",
+      "batchno": "Mollitia modi ea qui",
+      "batchqty": "166",
+      "mcno": "Sed illo repellendus",
+      "workorder": "Hala Madrid",
+      "yarnlotno": "Ad accusantium tempo",
+      "ftype": "Dolorem voluptate ir",
+      "dyeingprocess": "Est placeat amet ",
+      "remarks": "Dolorem obcaecati in",
+      "id": 1
+    },
+    {
+      "date": "18-Jul-1990",
+      "batchno": "Culpa consequatur m",
+      "batchqty": "270",
+      "mcno": "Error et quisquam ne",
+      "workorder": "Est eius consequatur",
+      "yarnlotno": "Veniam Nam consequa",
+      "ftype": "Fugiat quod omnis no",
+      "dyeingprocess": "Dignissimos natus au",
+      "remarks": "Labore veniam bland",
+      "id": 2
+    },
+    {
+      "date": "Rafat Khan",
+      "batchno": "Est itaque incididun",
+      "batchqty": "375",
+      "mcno": "Ea optio amet in n",
+      "workorder": "Ea obcaecati officia",
+      "yarnlotno": "Adipisci voluptas in",
+      "ftype": "Nobis adipisicing as",
+      "dyeingprocess": "Dolore assumenda fac",
+      "remarks": "Ea velit et cupidita",
+      "id": 3
+    }
+  ]
+}
